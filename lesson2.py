@@ -1,20 +1,34 @@
-# # data = int(input("Введите значение"))
-# # asd = input("asdasd")
-# # qq = int(input('asd'))
-# #
-# # if type(data) == type(int):
-# #     print ("Aaa")
-# # else:
-# #     print ('asdas')
-# # #
-# # # if data == 10:
-# # #     print(data)
-#
-# a = [1, 1, 2, 1]
-# b = {4, 4, 4, 4}
-#
+while True:
+    try:
+        s = input("Знак (+,-,*,/): ")
+        x = float(input("Введи число"))
+        y = float(input("Введи 2 число"))
 
 
+    except ValueError:
+        x = float(input("Нормально введи даа!!"))
+        y = float(input("Введи 2 число"))
+        s = input("Знак (+,-,*,/): ")
+
+    # s = input("Знак (+,-,*,/): ")
+    if s == '0':
+        break
+    if s in ('+', '-', '*', '/'):
+        # x = float(input("x="))
+        # y = float(input("y="))
+        if s == '+':
+            print( x+y)
+        elif s == '-':
+            print (x-y)
+        elif s == '*':
+            print (x*y)
+        elif s == '/':
+            if y != 0:
+                print(x/y)
+            else:
+                print("Деление на ноль!")
+    else:
+        print ("Неверный знак операции!")
 
 
 
